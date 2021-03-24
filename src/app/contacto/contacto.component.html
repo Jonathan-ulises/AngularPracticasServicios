@@ -1,0 +1,17 @@
+<div class="col-md-6">
+    <form class="form-group" #formContacto="ngForm" (ngSubmit)="onSubmit()">
+        <label for="txtNombre">Nombre</label>
+        <input class="form-control" type="text" name="txtNombre" id="txtNombre" #txtNombre= "ngModel" [(ngModel)] = "usuario.nombre">
+
+        <label for="txtAsunto">Asunto</label>
+        <input class="form-control" type="text" name="txtAsunto" id="txtAsunto" #txtAsunto= "ngModel" [(ngModel)] = "usuario.asunto">
+
+        <label for="txtCorreo">Correo</label>
+        <input class="form-control" type="text" name="txtCorreo" id="txtCorreo" #txtCorreo= "ngModel" [(ngModel)] = "usuario.correo">
+
+        <label for="txtMensaje">Mensaje</label>
+        <textarea class="form-control" name="txtMensaje" id="txtMensaje" cols="30" rows="10" #txtMensaje= "ngModel" [(ngModel)] = "usuario.mensaje"></textarea>
+        
+        <input class="btn btn-info btn-block" type="submit" value="Enviar">
+    </form>
+</div>

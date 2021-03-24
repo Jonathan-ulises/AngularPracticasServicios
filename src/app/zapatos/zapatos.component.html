@@ -1,0 +1,30 @@
+<p>zapatos works!</p>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 mb-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Talla</th>
+          <th scope="col">Color</th>
+          <th scope="col">Meterial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resulttt of resultList; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{resulttt.modelo}}</td>
+          <td>{{resulttt.talla}}</td>
+          <td>{{resulttt.color}}</td>
+
+          <td *ngIf="resulttt.materia == 1">Cuero</td>
+          <td *ngIf="resulttt.materia == 2">Sintetico</td>
+          <td *ngIf="resulttt.materia == 3">Tela</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
